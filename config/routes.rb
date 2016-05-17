@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root              'contacts#home'
+  get 'features' => 'contacts#features'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
