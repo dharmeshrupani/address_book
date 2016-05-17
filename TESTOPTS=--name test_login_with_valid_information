@@ -1,0 +1,15 @@
+Run options: --seed 1177
+
+# Running:
+
+.F
+
+Finished in 0.670773s, 2.9816 runs/s, 14.9082 assertions/s.
+
+  1) Failure:
+UsersLoginTest#test_login_with_valid_information [/Users/dR/Documents/ruby/address_book/test/integration/users_login_test.rb:16]:
+Expected at least 1 element matching "a[href="/users/762146111"]", found 0..
+Expected 0 to be >= 1.
+
+2 runs, 10 assertions, 1 failures, 0 errors, 0 skips
+]2;[Minitest results] 2 tests
