@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @contacts = @user.contacts.paginate(page: params[:page])
+    @contact = current_user.contacts.build if logged_in?
   end
 
   def new
@@ -11,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)    # Not the final implementation!
+    @user = User.new(user_params)    
     if @user.save
       log_in @user
       flash[:success] = "Welcome to the Address Book!"

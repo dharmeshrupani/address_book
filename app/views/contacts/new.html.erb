@@ -1,12 +1,15 @@
-<% provide(:title, "Edit user") %>
-<h1>Update your profile</h1>
+<% provide(:title, 'Add new contact') %>
+<h1>Add New Contact</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+    <%= form_for(@contact) do |f| %>
+      <%= render 'contacts/new' %>
 
-      <%= f.label :name %>
+      <%= f.label :firstname, "First Name" %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :lastname, "Last Name" %>
       <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :email %>
@@ -18,8 +21,7 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-      <%= f.submit "Save changes", class: "btn btn-primary" %>
+      <%= f.submit "Add", class: "btn btn-primary" %>
     <% end %>
-
   </div>
 </div>
